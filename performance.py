@@ -35,10 +35,9 @@ for col in features:
     plt.show()
 
 corr = df.corr(numeric_only=True)["performance_score"][1:6]
-# corr_percent = (corr * 100).round(2).astype(str) + " %"
 print(corr)
 
-# Teste avec seulement les deux variables les plus prometteuses
+
 target = 'performance_score'
 
 X = df[features]
@@ -67,25 +66,17 @@ resultats = pd.DataFrame({
     "Vraie valeur": y_test.values,
     "Prediction": y_pred
 })
-
+resultats.to_csv("resultats_predictions.csv", index=False)
 print(resultats.head())
 
 #visual
-import matplotlib.pyplot as plt
-
 plt.figure(figsize=(6,6))
-
-# points
 plt.scatter(y_test, y_pred, alpha=0.7)
-
-# ligne parfaite (prédiction idéale)
 min_val = min(min(y_test), min(y_pred))
 max_val = max(max(y_test), max(y_pred))
-
 plt.plot([min_val, max_val], [min_val, max_val], color='red')
 
 plt.xlabel("Valeurs réelles")
 plt.ylabel("Valeurs prédites")
 plt.title("Réel vs Prédit (Régression Linéaire)")
-
 plt.show()
