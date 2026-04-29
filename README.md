@@ -1,7 +1,3 @@
-Voici un **README propre, structuré et professionnel** que tu peux directement utiliser pour ton projet :
-
----
-
 # 📊 Analyse de la Performance des Employés
 
 ## 🧾 Contexte
