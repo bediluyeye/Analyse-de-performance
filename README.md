@@ -100,7 +100,7 @@ Construire un modèle de **régression linéaire** pour prédire :
 * Diviser les données (train/test)
 * Entraîner le modèle
 * Tester les performances
-* Interpréter les résultats (coefficients, R², MSE)
+* Interpréter les résultats
 
 ---
 
